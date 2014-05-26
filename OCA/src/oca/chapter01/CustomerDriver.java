@@ -18,6 +18,9 @@ public class CustomerDriver {
         //customer.balance = new BigDecimal(12506.45f);                
         customer.setBalance(12506.45f);
         System.out.println(customer.toString());
+        
+//        java.util.Properties properties = System.getProperties();
+//        properties.list(System.out);
 	}
 
 }
