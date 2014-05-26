@@ -10,6 +10,12 @@ public class Customer {
     private Locale locale;
     private BigDecimal balance;
 
+    public Customer() {
+    	this.name = "Default Customer";
+        this.accountNumber = 12345;
+        this.locale = Locale.ITALY;
+        this.balance = new BigDecimal("0");
+    }
     public Customer(String name, int accountNumber, Locale locale, BigDecimal balance) {
         this.name = name;
         this.accountNumber = accountNumber;

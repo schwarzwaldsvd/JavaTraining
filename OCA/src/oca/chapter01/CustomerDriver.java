@@ -13,7 +13,8 @@ public class CustomerDriver {
 		
 		// Define a reference and creates a new Customer object
         Customer customer;
-        customer = new Customer("Andrew White", 781513, Locale.UK, new BigDecimal("0"));
+        //customer = new Customer("Andrew White", 781513, Locale.UK, new BigDecimal("0"));
+        customer = new Customer();
         //customer.balance = new BigDecimal(12506.45f);                
         customer.setBalance(12506.45f);
         System.out.println(customer.toString());
