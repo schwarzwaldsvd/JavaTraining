@@ -8,7 +8,7 @@ public class Primes {
 		p.add(2);
 		p.add(5);
 		p.add(2);
-		p.sort();
+		//p.sort(); -- fails to compile
 		System.out.println(p);
 	}
 }
