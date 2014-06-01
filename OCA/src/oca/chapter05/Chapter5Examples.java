@@ -10,14 +10,14 @@ public class Chapter5Examples {
 //        forLoopExamples();
 //        theCommaOperator();
 //        forLoopVariations();
-        forEachLoopArraysExample();
+//        forEachLoopArraysExample();
 //        forEachLoopCollectionExample();
 //        forEachUsageIssues();
 
         // Variable number of arguments example
 //        int result;
 //        Chapter5Examples example = new Chapter5Examples();
-//        result = example.total(1, 2, 3, 4, 5);
+//        result = example.total(1, 2, 3, 4, 5, 6);
 //        System.out.println(result);
 //        result = example.total();
 //        System.out.println(result);
@@ -31,7 +31,8 @@ public class Chapter5Examples {
 //        nestedLoopExample();
 //        infiniteLoopExample();
 //        pitfallExamples();
-//        summationExample();
+        summationExample();
+
     }
 
     private static void summationExample() {
@@ -40,11 +41,11 @@ public class Chapter5Examples {
         int total;
         float average;
 
-        age[0] = 23;
-        age[1] = 18;
-        age[2] = 19;
-        age[3] = 18;
-        age[4] = 21;
+        age[0] = 35;
+        age[1] = 40;
+        age[2] = 45;
+        age[3] = 30;
+        age[4] = 27;
 
         total = 0;
         for (int number : age) {
