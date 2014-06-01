@@ -1,6 +1,8 @@
 package oca.chapter03;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Chapter3Examples {
 
@@ -15,9 +17,11 @@ public class Chapter3Examples {
         //floatingPointExamples();
         //calculate();
     	//calcSomeArrays();
-    	compareArrays();
+//    	compareArrays();
 //        enumerationExample();
 //        shortCircuitExamples();
+    	//copyArrays();
+    	testArrayList();
     }
 
     private static boolean evaluateThis() {
@@ -335,5 +339,70 @@ public class Chapter3Examples {
 	    System.out.println(grades.equals(grades2)); 			// false
 	    System.out.println(Arrays.equals(grades, grades2));		// false
 	    System.out.println(Arrays.deepEquals(grades, grades2));	// true
+     }
+    
+    private static void printArrayEmelens(int[] arr){
+    	// Print elements of second array on the screen
+    	for(int i : arr){
+    		System.out.print(i+", ");
+    	}
+    }
+    
+    private static void copyArrays(){
+    	int arr1[] = new int[5];
+    	int arr2[] = new int[5];
+    	
+    	for(int i = 0; i < arr1.length; i++) {
+    		arr1[i] = i;
+    	}
+
+    	// Simple element-by-element copy
+    	/*
+    	 * for(int i = 0; i < arr1.length; i++) {
+    		arr2[i] = arr1[i];
+    	}
+    	printArrayEmelens(arr2);
+    	*/
+    	
+    	// Using the System.arraycopy method
+    	System.arraycopy(arr1, 0, arr2, 0, 5);    	// 0, 1, 2, 3, 4
+    	printArrayEmelens(arr2);
+    }
+    
+    private static void copyIdenticalArray(){
+    	StringBuilder arr3[] = new StringBuilder[4];
+    	arr3[0] = new StringBuilder("Pine");
+    	arr3[1] = new StringBuilder("Oak");
+    	arr3[2] = new StringBuilder("Maple");
+    	arr3[3] = new StringBuilder("Walnut");
+    	
+    	StringBuilder arr4[] = new StringBuilder[4];
+    	// However, arr4 contains the same object reference variables used by arr3. 
+    	// The corresponding element of both arrays reference the same object.
+    	System.arraycopy(arr3, 0, arr4, 0, 4);
+    	
+    	// This approach is necessary if a deep copy is needed.
+    	for (int i = 0; i < arr3.length; i++) {
+    		arr4[i] = new StringBuilder(arr3[i]);
+    	}
+    }
+    
+    private static void testArrayList(){
+    	
+    	int arr1[] = new int[5];
+    	ArrayList list = new ArrayList();
+    	list.add("item 1");
+    	list.add("item 2");
+    	Object arr2[] = {"item 3", new Integer(5), list};
+    	String arr3[] = {"Pine", "Oak", "Maple", "Walnut"};
+    	Arrays.fill(arr1,5);
+    	System.out.println("----------------------------------------");
+    	System.out.println(Arrays.asList(arr3));
+    	System.out.println(Arrays.toString(arr1));
+    	System.out.println(Arrays.deepToString(arr2));
+    	
+    	List list2 = Arrays.asList(arr3);
+    	list2.set(0, "Birch");
+    	System.out.println(Arrays.toString(arr3));
     }
 }
