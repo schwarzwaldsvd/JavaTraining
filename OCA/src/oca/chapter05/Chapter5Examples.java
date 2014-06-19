@@ -1,11 +1,9 @@
 package oca.chapter05;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
 public class Chapter5Examples {
-
     public static void main(String[] args) {
 //        forLoopExamples();
 //        theCommaOperator();
@@ -175,23 +173,6 @@ public class Chapter5Examples {
     private static void continueStatementExample() {
         int i = 0;
         int j = 0;
-
-//        while (i < j) {
-//            //
-//            if (i < 0) {
-//                continue;
-//            }
-//            //
-//        }
-//
-//        while (i < j) {
-//            // 
-//            if (i < 0) {
-//                ;
-//            } else {
-//                // 
-//            }
-//        }
 
         System.out.println("Before the loop");
         outerOuterLabel:

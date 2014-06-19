@@ -1,0 +1,8 @@
+ENABLE_MIN_MAX=false
+SHOW_TEXT_ON_PERSPECTIVE_BAR=false
+SHOW_TRADITIONAL_STYLE_TABS=true
+USE_COLORED_LABELS=false
+VIEW_TAB_POSITION=1024
+eclipse.preferences.version=1
+presentationFactoryId=org.eclipse.ui.internal.r21presentationFactory
+showIntro=false

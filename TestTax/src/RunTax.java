@@ -11,7 +11,7 @@
 public class RunTax {
     
     
-    public static void main() {
+    public static void main(String[] args) {
         Tax t1 = new Tax();
         System.out.println("such much: " + t1.calc());
     }
